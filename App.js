@@ -2,19 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {ProductsScreen} from './Screens/ProductsScreen'
+import {TutorialsScreen} from './Screens/TutorialsScreen'
 
-const App = createNativeStackNavigator({
-    Products: {screen: ProductsScreen},
-    Tutorials: {screen: TutorialsScreen},
-});
 const Stack = createNativeStackNavigator();
 const Logo = require('./assets/PNGLogo.png');
-
-export default function App() 
-
-return ({
+function App (){
+    return (
     <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Products">
             <Stack.Screen
                 name="Products"
                 component={ProductsScreen}
@@ -27,7 +23,7 @@ return ({
             />
         </Stack.Navigator>
     </NavigationContainer>
-);
+)};
 
 const styles = StyleSheet.create({
   container: {
@@ -44,3 +40,5 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
 });
+
+export default function App()
