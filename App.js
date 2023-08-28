@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ProductsScreen} from './Screens/ProductsScreen'
-import {TutorialsScreen} from './Screens/TutorialsScreen'
+import {ProductsScreen} from './Screens/ProductsScreen';
+import {TutorialsScreen} from './Screens/TutorialsScreen';
 
 const Stack = createNativeStackNavigator();
 const Logo = require('./assets/PNGLogo.png');
@@ -41,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function App()
+export default App;
